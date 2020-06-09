@@ -164,6 +164,7 @@ def run_site(site_id, eco_df):
 eco_df = read_eco()
 
 insitu_subset = ['au_asm','au_cum']
+
 print('running rewef ebc closure for '+str(len(insitu_subset))+' sites')
 for site_id in tower_df.index:
     if site_id in insitu_subset:
