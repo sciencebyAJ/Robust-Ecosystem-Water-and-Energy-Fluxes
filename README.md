@@ -9,7 +9,7 @@ for details on eddy covariance flux estimates.
 Tested under: Python 3.7.4 :: Anaconda custom (64-bit)
 Last updated: 2020-06-08
 
-### Installation using Anaconda Environment
+### Install the Anaconda Environment
 Download [REWEF.yml](https://github.com/sciencebyAJ/Robust-Ecosystem-Water-and-Energy-Fluxes/blob/master/REWEF.yml)
 ```
 $ conda env create -f REWEF.yml
