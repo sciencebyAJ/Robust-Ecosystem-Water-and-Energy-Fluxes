@@ -13,7 +13,7 @@ Last updated: 2020-06-08
 Download [REWEF.yml](https://github.com/sciencebyAJ/Robust-Ecosystem-Water-and-Energy-Fluxes/blob/master/REWEF.yml)
 ```
 $ conda env create -f REWEF.yml
-$ conda activate myenv
+$ conda activate rewef
 ```
 
 ### Running the code
