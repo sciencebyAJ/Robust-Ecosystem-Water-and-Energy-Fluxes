@@ -3,14 +3,14 @@ This module contains a robust array of energy balance closure techniques for edd
 The focused use of this code is to support broad ingestion of Latent Energy observations for use in the evaluation of
 satellite driven evapotranspiration estimates from ECOSTRESS.
 
-This code was developed with contributions from A.J. Purdy, Brian Lee, Matt Dohlen & Joshua Fisher for the ECOSTRES validation analysis
+This code was developed with contributions from A.J. Purdy, Brian Lee, Matt Dohlen & Joshua Fisher for the ECOSTRESS validation analysis
 
 See Fisher et al., 2020 for more details
 https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019WR026058
 
 """
 
-__author__ = 'A.J. Purdy, Brian Lee, and Matt Dohlen'
+__author__ = 'A.J. Purdy, PhD'
 
 import numpy as np
 import pandas as pd
@@ -140,13 +140,13 @@ def close_fluxnet(insitu_df, offset=15):
 
     """
     try:
-        flag_day_lim = [] 
+        flag_day_lim = []
         insitu_cr_25 = []
         insitu_cr_50 = []
         insitu_cr_75 = []
 
         delta = offsets.Day(offset)
-        
+
         for t0 in insitu_df.index:
             ss_1 = insitu_df[t0-delta:t0+delta]
             hour = ss_1.index.hour
@@ -206,7 +206,7 @@ def close_fluxnet(insitu_df, offset=15):
 
         # Creating a flag when there are less than 5 days of data
         insitu_df['ebc_1_flag'] = flag_day_lim
-        
+
     except:
         # If the tower data cannot be closed due to missing data, we apply a range of artificial closure rates
         # These are only applied in the cases when net radiation or sensible heat flux observations are not available
